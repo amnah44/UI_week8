@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_large">500dp</dimen>
+    <dimen name="height_margin">160dp</dimen>
+    <dimen name="margin_normal">32dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="relative_margin" >18dp</dimen>
+    <dimen name="elevator_normal">16dp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="elevator_small">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size_double_small">8sp</dimen>
+    <dimen name="with_normal">190dp</dimen>
+    <dimen name="margin_box_type">24dp</dimen>
+    <dimen name="height_normal">45dp</dimen>
+    <dimen name="height_image">250dp</dimen>
+    <dimen name="width_profile_image">80dp</dimen>
+    <dimen name="call_margin">136dp</dimen>
+    <dimen name="message_margin">177dp</dimen>
+    <dimen name="top_add_icon">245dp</dimen>
+    <dimen name="height_card">236dp</dimen>
+    <dimen name="width_image1">97dp</dimen>
+    <dimen name="height_image_1">127dp</dimen>
+    <dimen name="width_image_2">59dp</dimen>
+    <dimen name="height_image_2">64dp</dimen>
+    <dimen name="width_image_3">142dp</dimen>
+    <dimen name="size_picture_friends">70dp</dimen>
+    <dimen name="special_text_size">12sp</dimen>
+    <dimen name="magin_ashley">12dp</dimen>
+    <dimen name="width_image_4">121dp</dimen>
+    <dimen name="margin_image_4">6dp</dimen>
+    <dimen name="margint_maggle">13dp</dimen>
+
+</resources>

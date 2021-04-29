@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/natural_image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_image"
+        android:fitsSystemWindows="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/slide_card"
+        style="@style/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/personal_image"
+                style="@style/profile_image"
+                android:layout_width="@dimen/width_profile_image"
+                android:layout_height="@dimen/width_profile_image"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:src="@drawable/amnah_ali" />
+
+            <TextView
+                android:id="@+id/tx_name"
+                style="@style/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/personal_image"
+                android:layout_toEndOf="@id/personal_image"
+                android:drawableTint="@color/blue_color"
+                android:text="@string/will_smith"
+                app:drawableEndCompat="@drawable/ic_baseline_supervisor_account_24" />
+
+            <TextView
+                android:id="@+id/tx_address"
+                style="@style/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_name"
+                android:layout_toEndOf="@id/personal_image"
+                android:text="@string/alberta_canada"
+
+                />
+
+            <ImageView
+                android:id="@+id/img_call"
+                style="@style/icons_attr.call_icon_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_address"
+                android:layout_toEndOf="@id/personal_image"
+                android:src="@drawable/ic_call" />
+
+            <TextView
+                android:id="@+id/call"
+                style="@style/text_of_icon.call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_call"
+                android:layout_alignParentStart="true"
+                android:text="@string/call" />
+
+            <ImageView
+                android:id="@+id/img_message"
+                style="@style/icons_attr.icons_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_address"
+                android:layout_toEndOf="@id/img_call"
+                android:src="@drawable/ic_messenger"
+                app:tint="@color/blue_color" />
+
+            <TextView
+                android:id="@+id/message"
+                style="@style/text_of_icon.message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_call"
+                android:layout_alignParentStart="true"
+                android:text="@string/message" />
+
+            <ImageView
+                android:id="@+id/img_more"
+                style="@style/icons_attr.icons_margin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tx_address"
+                android:layout_toEndOf="@id/img_message"
+                android:src="@drawable/ic_more"
+                app:tint="@color/blue_color" />
+
+            <TextView
+                android:id="@+id/more"
+                style="@style/text_of_icon.more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_more"
+                android:layout_toEndOf="@id/message"
+                android:text="@string/more" />
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/elevator_small"
+                android:layout_below="@id/message"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginEnd="32dp"
+                android:alpha="0.1"
+                android:background="@color/gray_normal" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                style="@style/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/timeline"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableTint="@color/gray_dark"
+                    app:drawableTopCompat="@drawable/ic_time_line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/about"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableTint="@color/gray_dark"
+                    app:drawableTopCompat="@drawable/ic_about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/friends"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableTint="@color/gray_dark"
+                    app:drawableTopCompat="@drawable/ic_friends" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/photos"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/text_size_small"
+                    app:drawableTint="@color/gray_dark"
+                    app:drawableTopCompat="@drawable/ic_photo" />
+
+                <ImageView
+                    android:layout_width="@dimen/elevator_normal"
+                    android:layout_height="@dimen/elevator_normal"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:padding="@dimen/elevator_small"
+                    android:rotation="90"
+                    android:src="@drawable/ic_more"
+                    app:tint="@color/gray_dark" />
+
+            </LinearLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linearLayout"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/elevator_normal"
+                android:padding="@dimen/elevator_small"
+                android:src="@drawable/zahraa" />
+
+            <TextView
+                android:id="@+id/box_type"
+                style="@style/box_type"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_normal"
+                android:layout_below="@id/linearLayout"
+                android:layout_toEndOf="@id/img_small"
+                android:lines="1"
+                android:text="@string/write_something_to_peter" />
+
+            <ImageView
+                style="@style/tint_blue.add_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@id/box_type"
+                android:alpha="0.3"
+                android:src="@drawable/ic_baseline_add_24" />
+
+            <RelativeLayout
+                android:id="@+id/card_of_photos"
+                style="@style/card_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/box_type"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:id="@+id/photos_card"
+                    style="@style/card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photos"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    style="@style/card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/photos_card"
+                    android:layout_toEndOf="@id/photos_card"
+                    android:text="@string/_780" />
+
+                <ImageView
+
+                    style="@style/tint_blue.card_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_photo" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_photos"
+                    style="@style/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/photos_card">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_1"
+                        android:layout_width="93dp"
+                        android:layout_height="133dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pinc_natural"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_2"
+                        android:layout_width="@dimen/width_image_2"
+                        android:layout_height="@dimen/height_image_2"
+                        android:layout_marginStart="@dimen/padding_small"
+                        android:layout_toEndOf="@id/image_1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/green_natural"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_3"
+                        android:layout_width="@dimen/width_image_3"
+                        android:layout_height="@dimen/height_image_2"
+                        android:layout_marginStart="@dimen/padding_small"
+                        android:layout_toEndOf="@id/image_2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/river"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_4"
+                        android:layout_width="@dimen/width_image_4"
+                        android:layout_height="@dimen/height_image_2"
+                        android:layout_below="@id/image_2"
+                        android:layout_marginStart="@dimen/margin_image_4"
+                        android:layout_marginTop="@dimen/margin_image_4"
+                        android:layout_toEndOf="@id/image_1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mountain"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image_5"
+                        android:layout_width="78dp"
+                        android:layout_height="@dimen/height_image_2"
+                        android:layout_below="@id/image_3"
+                        android:layout_marginStart="@dimen/padding_small"
+                        android:layout_marginTop="@dimen/margin_image_4"
+                        android:layout_toEndOf="@+id/image_4"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/road"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_4"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:gravity="center"
+                        android:text="@string/see_more"
+                        android:textSize="@dimen/text_size_double_small"
+                        android:textStyle="bold"
+                        app:drawableBottomCompat="@drawable/ic_arrow"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/card_of_friends"
+                style="@style/card_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/card_of_photos"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true">
+
+
+                <TextView
+                    android:id="@+id/friends_card"
+                    style="@style/card_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friends" />
+
+                <TextView
+                    style="@style/card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/friends_card"
+                    android:layout_toEndOf="@id/friends_card"
+                    android:text="@string/_530" />
+
+                <ImageView
+
+                    style="@style/tint_blue.card_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_friends" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_friends"
+                    style="@style/padding"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/friends_card"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="1dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/friend_1"
+                        android:layout_width="@dimen/size_picture_friends"
+                        android:layout_height="@dimen/size_picture_friends"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/carter"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <TextView
+                        android:id="@+id/carter_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/friend_1"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:text="@string/carter_white"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/special_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="SmallSp" />
+
+                    <TextView
+                        android:id="@+id/carter_mutual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/carter_white"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:text="@string/_12_mutual_friends"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_size_double_small"
+                        tools:ignore="SmallSp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/friend_2"
+                        android:layout_width="@dimen/size_picture_friends"
+                        android:layout_height="@dimen/size_picture_friends"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="@dimen/elevator_small"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:layout_toEndOf="@+id/friend_1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ashely"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <TextView
+                        android:id="@+id/ashley_ren"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/friend_2"
+                        android:layout_marginStart="@dimen/magin_ashley"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:layout_toEndOf="@id/carter_white"
+                        android:text="@string/ashley_ren"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/special_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/ashley_mutual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ashley_ren"
+                        android:layout_marginStart="19dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:layout_toEndOf="@id/carter_mutual"
+                        android:text="@string/_3_mutual_friends"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_size_double_small"
+                        tools:ignore="SmallSp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/friend_3"
+                        android:layout_width="@dimen/size_picture_friends"
+                        android:layout_height="@dimen/size_picture_friends"
+                        android:layout_marginStart="@dimen/elevator_small"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:layout_toEndOf="@+id/friend_2"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/alex"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <TextView
+                        android:id="@+id/alex_lopez"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/friend_2"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:layout_toEndOf="@id/ashley_ren"
+                        android:text="@string/alex_lopez"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/special_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/alex_mutual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/alex_lopez"
+                        android:layout_marginStart="@dimen/relative_margin"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:layout_toEndOf="@id/ashley_ren"
+                        android:text="@string/_5_mutual_friends"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_size_double_small"
+                        tools:ignore="SmallSp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/friend_4"
+                        android:layout_width="@dimen/size_picture_friends"
+                        android:layout_height="@dimen/size_picture_friends"
+                        android:layout_marginStart="@dimen/elevator_small"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:layout_toEndOf="@+id/friend_3"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/maggel"
+                        app:shapeAppearanceOverlay="@style/corner_image" />
+
+                    <TextView
+                        android:id="@+id/maggle_murphy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/friend_2"
+                        android:layout_marginStart="@dimen/margint_maggle"
+                        android:layout_marginTop="@dimen/padding_small"
+                        android:layout_toEndOf="@id/alex_lopez"
+                        android:lines="1"
+                        android:text="@string/maggle_mury"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/special_text_size"
+                        android:textStyle="bold"
+                        tools:ignore="RtlSymmetry" />
+
+                    <TextView
+                        android:id="@+id/maggle_mutual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/maggle_murphy"
+                        android:layout_marginStart="@dimen/margint_maggle"
+                        android:layout_marginEnd="@dimen/elevator_small"
+                        android:layout_toEndOf="@id/alex_mutual"
+                        android:text="@string/_1_mutual_friends"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/text_size_double_small"
+                        tools:ignore="SmallSp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_friends"
+                    android:gravity="center"
+                    android:text="@string/see_more"
+                    android:textSize="@dimen/text_size_double_small"
+                    android:textStyle="bold"
+                    app:drawableBottomCompat="@drawable/ic_arrow"
+                    tools:ignore="RtlSymmetry" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>

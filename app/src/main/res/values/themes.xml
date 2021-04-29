@@ -1,0 +1,153 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Week8" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/gray_dark</item>
+        <item name="colorOnPrimary">@color/gray_light_2</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_color</item>
+        <item name="colorSecondaryVariant">@color/gray_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Navigation Bar with appear dark -->
+        <item name="android:windowLightNavigationBar">true</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Background style of card slide -->
+    <style name="background">
+        <item name="android:background">@drawable/card_background</item>
+    </style>
+
+    <!-- style of profile image -->
+    <style name="profile_image">
+        <item name="android:elevation">@dimen/elevator_normal</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <!-- primary style of tint -->
+    <style name="tint_blue">
+        <item name="android:tint">@color/blue_color</item>
+    </style>
+    <!-- style of username -->
+    <style name="user_name">
+        <item name="android:layout_marginStart">@dimen/margin_box_type</item>
+        <item name="android:drawablePadding">@dimen/margin_small</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- style of address -->
+    <style name="address">
+        <item name="android:layout_marginStart">@dimen/margin_box_type</item>
+        <item name="android:textColor">@color/gray_normal</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <!-- style of icons below address -->
+    <style name="icons_attr">
+        <item name="android:tint">@color/blue_color</item>
+        <item name="android:layout_marginTop">@dimen/elevator_normal</item>
+        <item name="android:padding">@dimen/padding_small</item>
+        <item name="android:background">@drawable/circle_shape</item>
+    </style>
+
+    <style name="icons_attr.icons_margin">
+        <item name="android:layout_marginStart">@dimen/elevator_normal</item>
+    </style>
+
+    <style name="icons_attr.call_icon_margin">
+        <item name="android:layout_marginStart">@dimen/margin_box_type</item>
+    </style>
+
+    <!-- style of text below icon-->
+    <style name="text_of_icon">
+        <item name="android:padding">@dimen/margin_small</item>
+        <item name="android:textColor">@color/gray_normal</item>
+        <item name="android:textSize">@dimen/text_size_double_small</item>
+    </style>
+    <!-- style of call text -->
+    <style name="text_of_icon.call">
+        <item name="android:layout_marginStart">@dimen/call_margin</item>
+    </style>
+    <!-- style of message text -->
+    <style name="text_of_icon.message">
+        <item name="android:layout_marginStart">@dimen/message_margin</item>
+    </style>
+    <!-- style of more text -->
+    <style name="text_of_icon.more">
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+    </style>
+
+    <!-- theme of linear layout-->
+    <style name="linear">
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/margin_small</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:background">@drawable/linear_bacround</item>
+        <item name="android:padding">@dimen/padding_small</item>
+    </style>
+    <!-- style of the box to typing a comment-->
+    <style name="box_type">
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/margin_box_type</item>
+        <item name="android:background">@drawable/commint_box</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:paddingStart">@dimen/elevator_normal</item>
+        <item name="android:paddingEnd">@dimen/height_normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_double_small</item>
+    </style>
+
+    <!-- theme of add icon-->
+    <style name="tint_blue.add_icon">
+        <item name="android:layout_marginStart">@dimen/margin_small</item>
+        <item name="android:layout_marginTop">@dimen/top_add_icon</item>
+        <item name="android:background">@drawable/circle_shape</item>
+        <item name="android:padding">@dimen/padding_small</item>
+    </style>
+
+    <!-- style of card that consists all photos or friends-->
+    <style name="card_style">
+        <item name="android:layout_marginStart">@dimen/margin_normal</item>
+        <item name="android:layout_marginTop">@dimen/relative_margin</item>
+        <item name="android:layout_marginEnd">@dimen/margin_normal</item>
+        <item name="android:background">@drawable/corner_of_relative</item>
+        <item name="android:elevation">@dimen/elevator_small</item>
+    </style>
+
+    <!-- style of text that found in card -->
+    <style name="card_text">
+        <item name="android:paddingStart">@dimen/elevator_normal</item>
+        <item name="android:paddingTop">@dimen/elevator_normal</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- style of number in card -->
+    <style name="card_number">
+        <item name="android:paddingStart">@dimen/elevator_normal</item>
+        <item name="android:paddingTop">@dimen/elevator_normal</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <!-- style of image in card -->
+    <style name="tint_blue.card_image">
+        <item name="android:paddingEnd">@dimen/elevator_normal</item>
+        <item name="android:paddingTop">@dimen/elevator_normal</item>
+    </style>
+    <!-- padding for three dimension in all card that show picture or friends-->
+    <style name="padding">
+        <item name="android:paddingStart">@dimen/elevator_normal</item>
+        <item name="android:paddingTop">@dimen/elevator_normal</item>
+        <item name="android:paddingEnd">@dimen/elevator_normal</item>
+    </style>
+    <!-- corner to image in card view -->
+    <style name="corner_image">
+        <item name="cornerSize">10dp</item>
+    </style>
+
+
+</resources>
